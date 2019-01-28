@@ -1,3 +1,21 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-text{
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.btn-text:visited{
+  color: white;
+}
+.btn-text:hover{
+  text-decoration: none;
+  background-color: transparent;
+}
+.main-contents{
+  margin-top: 30px;
+}
+#new-article{
+  margin-top: 20px;
+}

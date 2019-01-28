@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      article:
+        content: "投稿内容"
+        name: "投稿者"
+        UpdateArticle: "更新"
