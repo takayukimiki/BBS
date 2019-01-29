@@ -3,20 +3,24 @@
 <h1>一言掲示板</h1>
 <div id="new-article"><button class="btn btn-primary" type="button" name="button"><%= link_to '新規記事投稿', new_article_path, class: "btn-text" %></button></div>
 <div class="main-contents">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-light table-striped">
       <thead>
         <tr>
+          <th>No</th>
           <th>投稿内容</th>
           <th>投稿者</th>
+          <th>投稿日時</th>
           <th colspan="3"></th>
         </tr>
       </thead>
 
       <tbody>
-        <% @articles.each do |article| %>
+        <% @articles.each_with_index do |article, i| %>
           <tr>
+            <td><%= "#{(i + 1)}" %></td>
             <td><%= article.content %></td>
             <td><%= article.name %></td>
+            <td><%= article.updated_at %></td>
             <td><button class="btn btn-secondary" type="button" name="button"><%= link_to '詳細', article, class: "btn-text" %></button></td>
             <td><button class="btn btn-success" type="button" name="button"><%= link_to '編集', edit_article_path(article) , class: "btn-text" %></button></td>
             <td><button class="btn btn-danger" type="button" name="button"><%= link_to '削除', article, method: :delete, data: { confirm: '記事を削除しますか？' }, class: "btn-text" %></button></td>
