@@ -6,7 +6,6 @@
     <table class="table table-bordered table-light table-striped">
       <thead>
         <tr>
-          <th>No</th>
           <th>投稿内容</th>
           <th>投稿者</th>
           <th>投稿日時</th>
@@ -17,7 +16,6 @@
       <tbody>
         <% @articles.each_with_index do |article, i| %>
           <tr>
-            <td><%= "#{(i + 1)}" %></td>
             <td><%= article.content %></td>
             <td><%= article.name %></td>
             <td><%= article.updated_at %></td>
